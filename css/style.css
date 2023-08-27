@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Raleway:wght@400;500;600;800&display=swap');
+
+/* Первый блок */
+.first-block {
+    background-image: url(/images/Photo-slider.png);
+    width: 1920px;
+    height: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+/* Шапка */
+.header {
+    width: 1175px;
+    display: flex;
+    margin: 0 auto;
+}
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0;
+}
+.logo {
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 34px;
+    color: white;
+    align-items: center;
+    position: relative;
+    margin-left: 0;
+}
+.nav {
+    width: 660px;
+    margin-left: 216px;
+    display: flex;
+    position: relative;
+}
+.menu {
+    display: flex;
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    justify-content: space-around;
+    padding: 0;
+    width: 100%;
+}
+.menu-li {
+    color: white;
+    cursor: pointer;
+    padding: 0px;
+}
+.menu-li:hover {
+    opacity: 70%;
+    transition: .3 ease-in-out;
+}
+.brown {
+    color: #c7b299;
+}
+.icon {
+    display: flex;
+    position: relative;
+    width: 70px;
+    margin-right: 0;
+}
+.icon-item {
+    margin: 0 7px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+.icon-item:hover {
+    opacity: 20%;
+    transition: .3 ease-in-out;
+}
+.slider-text {
+    display: flex;
+    margin: 200px auto;
+    width: 600px;
+    font-family: Raleway, sans-serif;
+    color: white;
+    font-size: 36px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.str-two {
+    font-family: Raleway, sans-serif;
+    font-weight: 800;
+    color: white;
+    font-size: 52px;
+    padding: 15px 0;
+}
+.str-three {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+.button {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    padding: 18px 37px;
+    border-radius: 8px;
+    background-color: #998675;
+}
+.started-btn {
+    font-family: Raleway, sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: white;
+}
+.slider-dots {
+    display: flex;
+    position: relative;
+    margin-top: 90px;
+    justify-content: center
+}
+.dots-item {
+    margin: 0 5px;
+    width: 15px;
+}
+/* Конец 1-го блока. */ 
+
+ /* Второй блок */
+.two-block {
+    display: flex;
+    flex-direction: column;
+    width: 1920px;
+    height: 1080px;
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0 auto;
+}
+.services-box {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    height: 375px;
+}
+.services:hover {
+    opacity: 80%;
+    transition: .3 ease-in-out;
+    cursor: pointer;
+}
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 215px;
+    width: 265px;
+    padding: 70px 30px;
+    text-align: center;
+}
+.service-item {
+    max-width: 45px;
+    
+}
+.service-h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #555555;
+    padding-top: 30px;
+}
+.service-h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #949494;
+    padding-top: 25px;
+}
+.service-line {
+    padding-top: 30px;
+    width: 30%;
+}
+.footer-services-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(1080px-375px);
+    position: relative;
+    bottom: 0;
+}
+.footer-services-text, .three-block-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+.services-text-h1, .three-text-h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #555555;
+    padding-top: 80px;
+}
+.services-text-h2, .three-text-h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #949494;
+    padding: 20px 0 40px 0;
+}
+.images-box {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    justify-content: center;
+}
+.images-bg-box {
+    display: flex;
+    width: 1230px;
+    height: auto;
+}
+.item-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.item-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.item-center {
+    z-index: 100;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+                /* Конец 2-го блока. */ 
+/* Третий блок */
+
+.three-block {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1920px;
+    height: 1080px;
+}
+.three-block-header {
+    background-image: url(/images/service-items/Background.png);
+    height: 150px;
+}
+.footer-img {
+    display: flex;
+    width: 1170px;
+    margin: 0 auto;
+    padding: 43px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-img-h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: #ffffff;
+}
+.footer-img-h2 {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #615855;
+    padding-top: 10px;
+}
+.text-block-brown {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: #c7b299;
+}
+.text-block-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fbfaf8;
+    height: auto;
+    background-image: url(/images/projects/bg-text.png);
+    height: 100px;
+}
+.text-block-item:hover {
+    opacity: 10;
+    background-image: none;
+    background-color: #998675;
+    transition: 3s;
+    z-index: 10000;
+    cursor: cell;
+    .triangle__top {
+        border-bottom: 15px solid #998675;
+        opacity: 10;
+        transition: 1.5s
+    }
+    .text-h1 {
+        color: rgb(255, 255, 255);
+        opacity: 50;
+        transition: 1.5s
+    }
+}
+.text-h1 {
+    color: #c7b299;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+.text-h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #d1d1d1;
+    padding-top: 10px;
+}
+.triangle__top {
+    display: flex;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #ffffff;
+    margin: -13px -0 0 25px;
+    z-index: 10000;
+ }
+ .fixed-text-block {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: center;
+    padding-left: 25px;
+ }
+.purchase-button {
+    width: 165px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: #998675;
+    margin-right: 0;
+    border-radius: 2px;
+}
+.purchase-btn {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+}
+.three-block-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 750px;
+    height: max-content;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+}
+.three-text-h1 {
+    
+    padding-top: 75px;
+}
+.three-text-h2 {
+    padding-bottom: 0;
+}
+.menu-projects {
+    display: flex;
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+    padding: 200px 0 40px 0;
+}
+.projects-btn {
+    width: auto;
+    background-color: #ffffff;
+    margin: 0 5px;
+    padding: 0 20px;
+    min-height: 30px;
+    border-color: #ebebeb;
+}
+.project-item {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    cursor: pointer;
+}
+.projects-btn:hover {
+    color: #ffffff;
+    background-color: #998675;
+    transition: 1s
+}
+.table-project-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1170px;
+    height: 700px;
+    margin: 0 auto;
+    justify-content: space-between
+}
+.latest-projects {
+    height: 370px;
+    width: 370px;
+}
+
+.project-bg-photo {
+    position: relative;
+    background-image: url(/images/projects/bg\ photo.png);
+    height: 235px;
+    width: 370px;
+}
+.img-item {
+    position: relative;
+    z-index: 0;
+}
+.img-item1 {
+    display: flex;
+    position: relative;
+    bottom: 14px;
+    left: 20px;
+    z-index: 100;
+}
+button {
+    cursor: pointer;
+}
+button:hover {
+    opacity: 50%;
+    transition: 1s ease-out;
+}
+.button-box {
+    display: flex;
+    margin: 0 auto;
+    padding: 40px 0 80px;
+}
+.load-button {
+    background-image: url(/images/projects/button.png);
+    background-repeat: no-repeat;
+    width: 170px;
+    height: 50px;
+    border-radius: 2px;
+    border-color: #ebebeb;
+}
+.load-btn {
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+                /* Конец 3-го блока. */ 
+
+ /* Видео блок */
+.video-block {
+    width: 1920px;
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    margin: 170px auto 0 auto;
+}
+.video-presentation {
+    /* display: flex; */
+    background-image: url(/images/presentation/bg\ photo.png);
+    width: 100%;
+    max-height: 700px;
+}
+.video-icon-text-block {
+    /* display: flex;
+    flex-direction: column; */
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    background-image: url(/images/presentation/photo.png);
+    height: 700px;
+}
+.icon-play {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 180px;
+    cursor: pointer;
+}
+.video-icon-item {
+    /* padding: 0;
+    display: flex; */
+    position: absolute;
+    /* width: 70px;
+    height: 70px;
+    margin: 0 auto; */
+}
+/* .video-icon-back {
+    display: flex;
+    position: absolute;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+} */
+.video-h1 {
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 30px;
+}
+.video-h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 16px;
+    padding-top: 30px;
+}
+.video-h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #c7b299;
+    font-weight: 600;
+    font-size: 14px;
+    padding-top: 40px;
+}
+.container-video-content {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: center;
+    padding: 250px 0;
+}
+                /* Конец Видео блока */ 
+
+ /* 5-ый блок */
+
+ .five-block {
+    max-width: 1920px;
+    height: auto;
+    margin: 0 auto;
+    flex-direction: column;
+    display: flex;
+ }
+
+ .content-box {
+    display: flex;
+    max-height: 990px;
+ }
+ .iphone-img {
+    display: flex;
+    /* position: relative; */
+    bottom: 0;
+    padding-top: 70px;
+    margin-left: 20%;
+ }
+ .content-box-text {
+    width: 750px;
+    display: flex;
+    margin-right: auto;
+    padding-top: 200px;
+    /* position: relative; */
+    flex-direction: column;
+ }
+ .iphone-text-h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #555555;
+    padding-bottom: 30px;
+ }
+.iphone-text-h2, .str, p {
+    font-family: 'Montserrat', sans-serif;
+    color: #8c8c8c;
+    font-weight: 300;
+    font-size: 16px;
+}
+.arrows {
+    padding-left: 40px;
+    height: auto;
+}
+.str {
+    margin: 10px auto;
+    height: 20px;
+} 
+ul .str {
+    background: url(/images/iphone/04.png) no-repeat left center;
+    list-style-type: none;
+    padding-left: 55px;
+}
+                /* Конец 6-Го блока */ 
+
+ /* Разделительная полоска */    
+.line-counts {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1920px;
+    height: 300px;
+    background-image: url(/images/iphone/Background.png);
+}
+.line-count-box {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 920px;
+}
+.counters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 35px;
+}
+.icon-item-lines {
+    display: flex;
+    flex-direction: column;
+    width: 45px;
+    height: auto;
+}
+.counter {
+    font-family: 'Montserrat', sans-serif;
+    color: #f1f0f0;
+    font-weight: 200;
+    font-size: 48px;
+    padding-top: 20px;
+}
+.name-counter {
+    font-family: 'Montserrat', sans-serif;
+    color: #c7b299;
+    font-weight: 300;
+    font-size: 14px;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+.line-pad {
+    padding-top: 30px;
+}
