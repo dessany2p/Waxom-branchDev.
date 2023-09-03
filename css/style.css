@@ -1,12 +1,26 @@
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@400;500;600;800&family=Roboto&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@400;500;600;800&family=Roboto&display=swap'); */
+
+@font-face {
+    font-family: Raleway;
+    src: url(/css/fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(/css/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(/css/fonts/Roboto/Roboto-Regular.ttf);
+}
+
 html {
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 /* Первый блок */
-.first-block {
+.header-main {
     background-image: url(/images/main/Photo-slider.png);
     width: 1920px;
-    height: 1024px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,30 +29,27 @@ html {
 }
 /* Шапка */
 .header {
-    width: 1175px;
     display: flex;
     margin: 0 auto;
 }
-.container {
-    display: flex;
-    align-items: center;
-    width: 100%;
+.slider__main-photo {
     padding: 40px 0;
+    width: 1175px;
+    display: flex;
 }
 .logo {
     display: flex;
     font-family: 'Raleway', sans-serif;
     font-size: 34px;
     color: white;
+    float: left;
     align-items: center;
-    position: relative;
-    margin-left: 0;
 }
-.nav {
-    width: 660px;
-    margin-left: 216px;
+.header-nav {
+    width: 630px;
+    margin: 0 auto;
     display: flex;
-    position: relative;
+    align-items: center;
 }
 .menu {
     display: flex;
@@ -63,16 +74,15 @@ html {
 }
 .icon {
     display: flex;
-    position: relative;
-    width: 70px;
-    margin-right: 0;
+    float: right;
+    align-items: center;
 }
-.icon-item {
-    margin: 0 7px;
-    padding: 0 5px;
+.menu-icon__item {
+    /* margin: 0 7px;*/
+    padding: 0 15px; 
     cursor: pointer;
 }
-.icon-item:hover {
+.menu-icon__item:hover {
     opacity: 20%;
     transition: .3 ease-in-out;
 }
@@ -117,8 +127,8 @@ html {
 .slider-dots {
     display: flex;
     position: relative;
-    margin-top: 90px;
-    justify-content: center
+    justify-content: center;
+    bottom: 15px;
 }
 .dots-item {
     margin: 0 5px;
@@ -127,23 +137,17 @@ html {
 /* Конец 1-го блока. */ 
 
  /* Второй блок */
-.two-block {
+.section-services {
     display: flex;
     flex-direction: column;
     width: 1920px;
-    height: 1080px;
     background-color: #ffffff;
     padding: 0;
     margin: 0 auto;
 }
 .services-box {
     display: flex;
-    position: relative;
-    flex-direction: row;
-    align-items: center;
     margin: 0 auto;
-    justify-content: center;
-    height: 375px;
 }
 .services:hover {
     opacity: 80%;
@@ -161,8 +165,7 @@ html {
     text-align: center;
 }
 .service-item {
-    max-width: 45px;
-    
+    max-width: 100%;
 }
 .service-h1 {
     font-family: 'Raleway', sans-serif;
@@ -186,11 +189,8 @@ html {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: calc(1080px-375px);
-    position: relative;
-    bottom: 0;
 }
-.footer-services-text, .three-block-text {
+.footer-services-text, .block-text__projects {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,14 +198,13 @@ html {
     margin: 0 auto;
     text-align: center;
 }
-.services-text-h1, .three-text-h1 {
+.services-text-h1, .projects-text-h1 {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-size: 30px;
     color: #555555;
-    padding-top: 80px;
 }
-.services-text-h2, .three-text-h2 {
+.services-text-h2, .projects-text-h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -213,10 +212,8 @@ html {
     padding: 20px 0 40px 0;
 }
 .images-box {
-    display: flex;
     position: relative;
     margin: 0 auto;
-    justify-content: center;
 }
 .images-bg-box {
     display: flex;
@@ -242,18 +239,17 @@ html {
                 /* Конец 2-го блока. */ 
 /* Третий блок */
 
-.three-block {
+.section-latest__projects {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     width: 1920px;
-    height: 1080px;
 }
-.three-block-header {
+.header-latest__projects {
     background-image: url(/images/service-items/Background.png);
     height: 150px;
 }
-.footer-img {
+.header-img__box {
     display: flex;
     width: 1170px;
     margin: 0 auto;
@@ -261,13 +257,13 @@ html {
     justify-content: space-between;
     align-items: center;
 }
-.footer-img-h1 {
+.header-img-h1 {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 28px;
     color: #ffffff;
 }
-.footer-img-h2 {
+.header-img-h2 {
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
@@ -295,7 +291,6 @@ html {
     background-image: none;
     background-color: #998675;
     transition: 1.51s ease;
-    z-index: 10000;
     cursor: cell;
     .triangle__top {
         border-bottom: 15px solid #998675;
@@ -354,7 +349,7 @@ html {
     font-weight: 800;
     font-size: 14px;
 }
-.three-block-text {
+.block-text__projects {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -364,11 +359,10 @@ html {
     text-align: center;
     padding: 0;
 }
-.three-text-h1 {
-    
+.projects-text-h1 {
     padding-top: 75px;
 }
-.three-text-h2 {
+.projects-text-h2 {
     padding-bottom: 0;
 }
 .menu-projects {
@@ -419,14 +413,7 @@ html {
 }
 .img-item {
     position: relative;
-    z-index: 0;
-}
-.img-item1 {
-    display: flex;
-    position: relative;
-    bottom: 14px;
-    left: 20px;
-    z-index: 100;
+    /* z-index: 0; */
 }
 button {
     cursor: pointer;
@@ -464,7 +451,7 @@ button:hover {
     /* flex-direction: column;
     justify-content: center;
     align-items: center; */
-    margin: 170px auto 0 auto;
+    margin: 0 auto;
 }
 .video-presentation {
     /* display: flex; */
@@ -494,20 +481,13 @@ button:hover {
     cursor: pointer;
 }
 .video-icon-item {
-    /* padding: 0;
-    display: flex; */
     position: absolute;
-    /* width: 70px;
-    height: 70px;
-    margin: 0 auto; */
 }
-/* .video-icon-back {
-    display: flex;
-    position: absolute;
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-} */
+.video-icon-item:hover {
+    cursor: pointer;
+    opacity: 50%;
+    transition: ease-in 0.3s;
+}
 .video-h1 {
     font-family: 'Raleway', sans-serif;
     color: #ffffff;
@@ -543,7 +523,7 @@ button:hover {
 
  /* 5-ый блок */
 
- .five-block {
+ .section-devices {
     max-width: 1920px;
     height: auto;
     margin: 0 auto;
@@ -621,6 +601,11 @@ ul .str {
     justify-content: center;
     margin: 0 auto;
     padding: 0 35px;
+}
+.counters:hover {
+    cursor: pointer;
+    opacity: 50%;
+    transition: ease-in 1s;
 }
 .icon-item-lines {
     display: flex;
@@ -711,7 +696,8 @@ ul .str {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    height: 215px;
+    position: relative;
+    display: flex;
 }
 .recent-img__item {
     max-width: 100%;
@@ -719,8 +705,8 @@ ul .str {
 .date-box {
     display: flex;
     flex-direction: column;
-    position: relative;
-    top: -205px;
+    position: absolute;
+    top: 20px;
     left: 20px;
     max-width: max-content;
 }
@@ -800,7 +786,8 @@ ul .str {
 
 /* Footer */
 .footer {
-    /* max-width: 1920px; */
+    max-width: 1920px;
+    margin: 0 auto;
     background: #191919;
     box-sizing: border-box;
 }
@@ -925,7 +912,9 @@ ul .str {
 }
 .container-copiryte {
     background: #111111;
+    max-width: 1920px;
     display: flex;
+    margin: 0 auto;
     flex-direction: row;
 }
 .copiryte-box {
@@ -939,19 +928,17 @@ ul .str {
 ul, li {
     margin: 0;
     padding: 0;
-}
 
+}
 .copiryte-left, .copiryte-right {
     display: flex;
-}
-.left-li, .right-li {
     list-style-type: none;
-    padding: 0 2px;
-    color: #fff;
+    color: #555555;
     font-family: Montserrat, serif;
     font-size: 13px;
     font-weight: 300;
     line-height: 20px;
+    cursor: pointer;
 }
 .copiryte-left {
     position: relative;
@@ -960,4 +947,13 @@ ul, li {
 .copiryte-right {
     position: relative;
     right:  80px;
+}
+.left-li, .right-li {
+    padding: 0 2px;
+}
+.color-li_gray {
+    color: #959595;
+}
+.color-li_brown {
+    color: #c7b299;
 }
