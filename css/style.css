@@ -18,6 +18,10 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    background-repeat: no-repeat;
+}
+
 /* Первый блок */
 
 .header-main {
@@ -192,6 +196,11 @@ html {
 
 .service-item {
     max-width: 100%;
+    max-height: 100%;
+}
+
+.box-service-item {
+    height: 50px;
 }
 
 .service-h1 {
@@ -200,6 +209,7 @@ html {
     font-size: 22px;
     color: #555555;
     padding-top: 30px;
+    white-space: nowrap;
 }
 
 .service-h2 {
@@ -248,30 +258,34 @@ html {
 .images-box {
     position: relative;
     margin: 0 auto;
+    max-width: 1230px;
 }
 
 .images-bg-box {
     display: flex;
-    width: 1230px;
+    
     height: auto;
 }
 
 .item-left {
     position: absolute;
-    left: 0;
+    right: 30%;
     bottom: 0;
+    width: 100%;
 }
 
 .item-right {
     position: absolute;
-    right: 0;
+    left: 30%;
     bottom: 0;
+    width: 100%;
 }
 
 .item-center {
     z-index: 100;
     bottom: 0;
     margin: 0 auto;
+    width: 100%;
 }
 
                 /* Конец 2-го блока. */ 
@@ -287,15 +301,21 @@ html {
 .header-latest__projects {
     background-image: url(/images/service-items/Background.png);
     height: 150px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
 }
 
 .header-img__box {
     display: flex;
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 43px 0;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    left: 5%;
+    right: 5%;
 }
 
 .header-img-h1 {
@@ -387,10 +407,8 @@ html {
 .purchase-button {
     width: 165px;
     height: 50px;
-    margin: 0;
-    padding: 0;
     background-color: #998675;
-    margin-right: 0;
+    margin-left: 33%;
     border-radius: 2px;
 }
 
@@ -516,22 +534,18 @@ button:hover {
 .video-block {
     width: 1920px;
     margin: 0 auto;
-}
-
-.video-presentation {
-    background-image: url(/images/presentation/bg\ photo.png);
-    width: 100%;
-    max-height: 700px;
+    height: 700px;
 }
 
 .video-icon-text-block {
+    display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     margin: 0 auto;
     background-image: url(/images/presentation/photo.png);
-    height: 700px;
+    height: 100%;
 }
 
 .icon-play {
@@ -541,7 +555,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 180px;
+    top: -20px;
     cursor: pointer;
 }
 
@@ -587,7 +601,7 @@ button:hover {
     flex-wrap: wrap;
     margin: auto;
     text-align: center;
-    padding: 250px 0;
+    padding: 150px 0;
 }
 
                 /* Конец Видео блока */ 
@@ -614,7 +628,7 @@ button:hover {
  }
 
  .content-box-text {
-    width: 750px;
+    max-width: 750px;
     display: flex;
     margin-right: auto;
     padding-top: 200px;
@@ -947,6 +961,7 @@ ul .str {
     top: 5px;
     right: 4px;
 }
+
 .slider-arrow-right::before {
     content: '';
     width: 15px;
@@ -1195,10 +1210,287 @@ ul, li {
 .left-li, .right-li {
     padding: 0 2px;
 }
+
 .color-li_gray {
     color: #959595;
 }
 
 .color-li_brown {
     color: #c7b299;
+}
+
+/* Adaptyve CSS */
+@media (max-width: 1920px) {
+    section, .header-main {    
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        background-size: cover;
+    } 
+    .section-services, .section-latest__projects, .video-block, .partners {
+        width: 100%;
+        height: auto;
+    }
+    .video-icon-text-block {
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: auto;
+        align-items: center;
+       }
+       .images-box {
+        position: relative;
+        margin: 0 auto;
+        max-width: 1230px;
+        width: 60%;
+    }
+}
+
+
+@media (max-width: 1400px) {
+    .header-latest__project {
+        height: auto;
+    }
+    .section-services {
+        max-width: 100%;
+        /* max-height: 950px; */
+    }
+    .services-box {
+        width: 80%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+    .services {
+        padding: 50px 15px;
+        width: 45%;
+    }
+    .table-project-item {
+        width: 80%;
+        justify-content: space-evenly;
+        height: auto;
+        }
+    .block-text__projects {
+        padding-bottom: 0;
+    }
+    /* .images-box {
+         width: 80%;
+    } */
+}
+
+@media (max-width:1170px) {
+    .header-main {
+        max-width: 1170px;
+        height: auto;
+    }
+    .header {
+        position: relative;
+        margin: 0 auto
+    }
+    .slider__main-photo {
+        flex-direction: column;
+        align-items: center;
+        max-width: min-content;
+         .logo {
+            position: absolute;
+            left: 3%;
+        }
+        .icon {
+             position: absolute; 
+            top: 28%;
+            right: 2%;
+        } 
+        .header-nav {
+            padding-top: 15%;
+        }
+    }
+
+    .slider-text {
+        margin: 36% auto;
+    }
+
+    .header-img__box {
+        display: flex;
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 25px 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .text-block-brown, .header-img-h1, header-img-h2 {
+            font-size: 1.2rem;
+        }
+        .purchase-button {
+            width: 145px;
+            height: 40px;
+            margin-left: 0;
+            margin: 15px 0;
+        }
+    }
+
+    .menu-projects {
+        margin: 2% auto;
+    }
+
+    .container-partners {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+    }
+    
+    .partner__img  {
+        padding: 8% 3%;
+    }
+
+    .iphone-img {
+        height: 20%;
+        width: 40%;
+    }
+    .content-box-text {
+        justify-content: center;
+        padding: 0;
+    }
+    .list-style {
+        margin: 0 5px;
+    }
+    .li-arrow-text-style {
+        line-height: 24px;
+    }
+
+    .line-counts {
+        height: auto;
+    }
+    .line-count-box {
+        max-width: 900px;
+        width: 90%;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .counters {
+        padding: 5% 0;
+        margin: 0 auto;
+        width: 25%;
+    }
+    .counter {
+        font-size: 1.5em;
+    }
+    
+    .icon-item-lines {
+        max-width: 45px;
+        width: 100%;
+        height: auto;
+    }
+
+    .container-partners{
+        flex-wrap: wrap;
+    }
+    .partner__img {
+        display: flex;
+        align-items: center;
+        padding: 3%;
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .table-recents__posts {
+        width: 80%;
+        flex-wrap: wrap;
+        margin: 20px auto;
+        justify-content: center
+    }
+    .recent-post__item {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .footer {
+        /* flex-wrap: wrap; */
+    }
+    .container__footer {
+        max-width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 3%;
+    }
+    .about__box, .recent-posts__box, .our-twitter__box, .dribble-widget__box {
+        height: auto;
+        max-width: 350px;
+        width: 50%;
+        padding: 1%;
+        margin: 0 auto;
+    }
+
+    .h1-footer {
+        font-size: 1em;
+        margin: 3% 0;
+    }
+
+    .copiryte-box {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .copiryte-left, .copiryte-right {
+        position: relative;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-box {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .services {
+        width: 100%;
+    }
+
+    .block-text__projects {
+        width: 80%;
+    }
+
+    .iphone-img {
+        height: 20%;
+        width: 40%;
+    }
+
+    .content-box-text {
+        margin: 0 auto;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .partner__img {
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+    }
+
+    .container-partners {
+        max-height: 700px;
+    }
+
+    .about__box, .recent-posts__box, .our-twitter__box, .dribble-widget__box {
+        height: auto;
+        max-width: 350px;
+        width: 100%;
+        padding: 1%;
+        margin: 0 auto;
+    }
+
+    .li-arrow-text-style {
+        line-height: normal;
+        word-wrap: normal;
+        font-size: 12px;
+        padding: 10px 0;
+    }
+
+    .list-style {
+        margin: 0 10px;
+    }
 }
