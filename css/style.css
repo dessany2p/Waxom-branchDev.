@@ -13,8 +13,9 @@
     src: url(/css/fonts/Roboto/Roboto-Regular.ttf);
 }
 
-html {
-    overflow-x: hidden;
+html, body {
+    width:100%; 
+    overflow-x:hidden;
     box-sizing: border-box;
 }
 
@@ -26,12 +27,12 @@ body {
 
 .header-main {
     background-image: url(/images/main/Photo-slider.png);
-    width: 1920px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
     margin: 0 auto;
+    max-height: 900px;
+    background-size: cover;
 }
 
 /* Шапка */
@@ -39,10 +40,14 @@ body {
 .header {
     display: flex;
     margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .slider__main-photo {
-    padding: 40px 0;
+    padding-top: 5%;
     width: 1175px;
     display: flex;
 }
@@ -106,7 +111,7 @@ body {
 
 .slider-text {
     display: flex;
-    margin: 200px auto;
+    margin: 250px auto;
     width: 600px;
     font-family: Raleway, sans-serif;
     color: white;
@@ -114,6 +119,11 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.container-main {
+    position: relative;
+    top: -50px;
 }
 
 .str-two {
@@ -952,26 +962,27 @@ ul .str {
 
 .slider-arrow-left::before {
     content: '';
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
     position: absolute;
-    border-top: 2px solid #fff;
-    border-left: 2px solid #fff;
-    transform: rotate(-45deg);
-    top: 5px;
-    right: 4px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: rotate(45deg);
+    top: 7px;
+    right: 6px;
 }
 
 .slider-arrow-right::before {
     content: '';
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
     position: absolute;
-    border-top: 2px solid #fff;
-    border-right: 2px solid #fff;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
     transform: rotate(45deg);
-    top: 5px;
-    left: 5px;
+    top: 7px;
+    left: 6px;
+
 }
 
 .slider-arrow-right:hover,
@@ -1179,6 +1190,8 @@ ul .str {
     box-sizing: border-box;
     margin: 0 auto;
     justify-content: space-between;
+    visibility: visible;
+    position: relative;
 }
 
 ul, li {
@@ -1188,6 +1201,27 @@ ul, li {
 
 .copiryte-left, .copiryte-right {
     display: flex;
+}
+
+.copiryte-left {
+    position: absolute;
+    left: 80px;
+}
+
+.copiryte-right {
+    position: absolute;
+    right:  80px;
+}
+
+.border {
+    border-right: 1px solid #797979;
+    padding-left: 5px;
+    max-height: min-content;
+    height: 15px;
+    font-size: inherit;
+}
+
+.left-li, .right-li {
     list-style-type: none;
     color: #555555;
     font-family: Montserrat, serif;
@@ -1195,20 +1229,7 @@ ul, li {
     font-weight: 300;
     line-height: 20px;
     cursor: pointer;
-}
-
-.copiryte-left {
-    position: relative;
-    left: 80px;
-}
-
-.copiryte-right {
-    position: relative;
-    right:  80px;
-}
-
-.left-li, .right-li {
-    padding: 0 2px;
+    padding: 0 5px;
 }
 
 .color-li_gray {
@@ -1217,6 +1238,37 @@ ul, li {
 
 .color-li_brown {
     color: #c7b299;
+}
+
+.box-small__width {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    visibility: hidden;
+    display: none;
+}
+
+.copiryte-column {
+    display: flex;
+    font-size: inherit;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.li-w50 {
+    display: flex;
+    padding: 5px 4px;
+}
+
+.li-w100 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 5px;
 }
 
 /* Adaptyve CSS */
@@ -1244,10 +1296,36 @@ ul, li {
         max-width: 1230px;
         width: 60%;
     }
+    .slider-text {
+        
+    }
 }
 
+@media (max-width: 1560px) {
+    .header-main {    
+        width: 100%;
+        max-width: 1560px;
+        background-size: cover;
+    } 
+    .slider-text {
+        margin: 180px auto;
+    }
+    .str-one {
+        font-size: 0.7em
+     }
+     .str-two {
+         font-size: 1.1em
+      }
+}
 
 @media (max-width: 1400px) {
+    .header-main {
+        max-width: 1400px;
+    } 
+    .slider-text {
+        margin: 130px auto;
+    }
+
     .header-latest__project {
         height: auto;
     }
@@ -1277,35 +1355,58 @@ ul, li {
     } */
 }
 
-@media (max-width:1170px) {
+@media (max-width:1190px) {
     .header-main {
-        max-width: 1170px;
+        max-width: 1190px;
         height: auto;
     }
     .header {
         position: relative;
         margin: 0 auto
     }
+    .str-one {
+       font-size: 0.8em
+    }
+    .str-two {
+        font-size: 1.5em
+     }
     .slider__main-photo {
         flex-direction: column;
         align-items: center;
         max-width: min-content;
-         .logo {
+        position: relative;
+        .logo {
             position: absolute;
             left: 3%;
         }
-        .icon {
-             position: absolute; 
-            top: 28%;
-            right: 2%;
-        } 
         .header-nav {
             padding-top: 15%;
         }
     }
+    .icon {
+        position: fixed;
+        top: 5%;
+        right: 5%;
+        z-index: 100;
+        background: gray;
+        opacity: 30%;
+        border-radius: 10px;
+        height: 40px;
+        
+        }
+        .icon:hover {
+            opacity: 90%;
+            transition: .1s ease-in-out;
+            background-color: #a48d72;
+            .menu-icon__item:hover {
+                opacity: 60%;
+                transition: .3 ease-in-out;
+            }
+        }
 
     .slider-text {
         margin: 36% auto;
+        font-size: 24px;
     }
 
     .header-img__box {
@@ -1368,7 +1469,7 @@ ul, li {
     .counters {
         padding: 5% 0;
         margin: 0 auto;
-        width: 25%;
+        width: 10%;
     }
     .counter {
         font-size: 1.5em;
@@ -1492,5 +1593,16 @@ ul, li {
 
     .list-style {
         margin: 0 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .copiryte-box {
+        display: none;
+        visibility: hidden;
+    }
+    .box-small__width {
+        display: block;
+        visibility: visible;
     }
 }
