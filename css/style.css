@@ -14,8 +14,8 @@
 }
 
 html, body {
-    width:100%; 
-    overflow-x:hidden;
+    width: 100%; 
+    overflow-x: hidden;
     box-sizing: border-box;
 }
 
@@ -186,6 +186,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 16px;
+    padding: 0 10px;
 }
 
 .button {
@@ -311,7 +312,7 @@ body {
     font-weight: 300;
     font-size: 16px;
     color: #949494;
-    padding: 20px 0 40px 0;
+    padding: 20px 10px 40px 10px;
 }
 
 .images-box {
@@ -405,7 +406,6 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #fbfaf8;
-    height: auto;
     background-image: url(/images/projects/bg-text.png);
 }
 
@@ -483,7 +483,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 750px;
+    max-width: 750px;
     height: max-content;
     margin: 0 auto;
     text-align: center;
@@ -832,6 +832,16 @@ ul .str {
     padding-top: 30px;
 }
 
+.box-height-image {
+    height: 50px;
+}
+
+.border-line-item {
+    border-bottom: 4px solid whitesmoke;
+    margin: 10px 0;
+    width: 50px;
+}
+
 .container-box {
     display: flex;
     flex-direction: column;
@@ -1067,14 +1077,17 @@ ul .str {
     background-image: url(/images/partners/photo.png);
     background-repeat: no-repeat;
     max-width: 1920px;
-    max-height: 500px;
+    width: 100%;
+    min-height: 480px;
+    height: auto;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .partner__img {
     display: flex;
     align-items: center;
-    padding: 130px 40px;
+    padding: 2%;
     max-width: 100%;
     max-height: 210px;
     flex-wrap: wrap;
@@ -1222,6 +1235,7 @@ ul .str {
 
 .logo-margin {
     margin-bottom: 20px;
+    display: flex;
 }
 
 .container-copiryte {
@@ -1487,7 +1501,7 @@ ul, li {
     }
 
     .slider-text {
-        margin: 36% auto;
+        margin: 150px auto;
         font-size: 24px;
     }
 
@@ -1499,15 +1513,17 @@ ul, li {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        .text-block-brown, .header-img-h1, header-img-h2 {
-            font-size: 1.2rem;
-        }
-        .purchase-button {
-            width: 145px;
-            height: 40px;
-            margin-left: 0;
-            margin: 15px 0;
-        }
+    }
+
+    .text-block-brown, .header-img-h1, header-img-h2 {
+        font-size: 1.2rem;
+    }
+    
+    .purchase-button {
+        width: 145px;
+        height: 40px;
+        margin-left: 0;
+        margin: 15px 0;
     }
 
     .menu-projects {
@@ -1556,8 +1572,8 @@ ul, li {
 
     .counters {
         padding: 5% 0;
-        margin: 0 auto;
-        width: 10%;
+        /* margin: 0 auto;
+        width: 10%; */
     }
 
     .counter {
@@ -1605,7 +1621,6 @@ ul, li {
         height: auto;
         max-width: 350px;
         width: 50%;
-        padding: 1%;
         margin: 0 auto;
     }
 
@@ -1640,6 +1655,15 @@ ul, li {
         .video-h2, .video-h3 {
             padding: 15px 0;
         }
+    }
+
+    .table-project-item {
+        width: 100%;
+        max-width: fit-content;
+    }
+
+    .latest-projects {
+        margin: 0 10px;
     }
 
 }
@@ -1777,6 +1801,7 @@ ul, li {
         word-wrap: normal;
         width: 100%;
         max-width: 765px;
+        /* margin: 0 auto; */
     }
 
     .services-box {
@@ -1788,9 +1813,9 @@ ul, li {
         width: 100%;
     }
 
-    .block-text__projects {
+    /* .block-text__projects {
         width: 80%;
-    }
+    } */
 
     .iphone-img {
         height: 20%;
@@ -1814,11 +1839,9 @@ ul, li {
     }
 
     .about__box, .recent-posts__box, .our-twitter__box, .dribble-widget__box {
-        height: auto;
-        max-width: 350px;
         width: 100%;
-        padding: 1%;
         margin: 0 auto;
+        padding: 0 15px;
     }
 
     .li-arrow-text-style {
@@ -1848,6 +1871,8 @@ ul, li {
     .menu-projects {
         flex-wrap: wrap;
         justify-content: center;
+        margin: 4% 2%;
+        padding: 0;
         .projects-btn {
             margin: 5px;
         }
@@ -1878,39 +1903,95 @@ ul, li {
     }
 
     .line-count-box {
-        max-height: 200px;
+        max-height: auto;
         width: 100%;
     }
 
-    .icon-item-lines{
+    .border-line-item{
         position: absolute;
-        top: 0;
+        bottom:  0;
     }
 
     .counters {
         position: relative;
-        padding: 8% 0;
-        margin: 15px auto;
         width: 20%;
+        min-height: 160px;
+        padding: 10px 0;
+    }
+
+    .counter {
+        padding: 0;
     }
 
     .name-counter {
+        padding: 0;
         position: absolute;
-        bottom: 0;
+        bottom: 15%;
+    }
+
+    .box-height-image {
+        position: absolute;
+        top: 10%;
     }
     
     .icon-item-lines.line-pad {
         display: none;
         visibility: hidden;
     }
+    
+    .services-text-h2 {
+        padding: 10px;
+    } 
+    
+    .iphone-text-h2 {
+        padding: 0 10px;
+    }
 
+    .header-latest__projects {
+        min-height: 150px;
+        height: fit-content;
+    }
 
+    .header-img__box {
+        position: relative;
+        left: 0;
+        right: 0;
+    }
 
+    .img-text-block {
+        padding: 10px;
+    }
 
+    .purchase-button {
+        margin: 0;
+    }
+    .partner__img {
+        width: 30%;
+    }
+    
+
+    .about__box, .recent-posts__box, .our-twitter__box, .dribble-widget__box {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        padding-left: 20px;
+    }
+
+    .link-read {
+        margin-bottom: 20px;
+    }
+
+    .about__box {
+        width: 100%;
+    max-width: fit-content;
+    box-sizing: border-box;
 }
 
-
-
+    .dribble-widget__box {
+        width: 100%;
+        box-sizing: content-box;
+    }
+}
 
 @media (max-width: 500px) {
     .copiryte-box {
@@ -1921,4 +2002,10 @@ ul, li {
         display: block;
         visibility: visible;
     }
+
+    .counters {
+        width: 30%;
+    }
+
+
 }
