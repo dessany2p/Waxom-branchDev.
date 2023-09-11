@@ -26,12 +26,10 @@ body {
 /* Первый блок */
 
 .header-main {
-    /* background-image: url(/images/main/Photo-slider.png); */
     width: 100%;
     height: 100%;
     max-width: 1920px;
     margin: 0 auto;
-    /* max-height: 900px; */
     background-size: cover;
     position: relative;
 }
@@ -46,16 +44,11 @@ body {
     align-items: center;
     top: 0;
     overflow: hidden;
-    /* position: absolute;
-    left: 50%;
-    transform: translate(-50%); */
-    /* background-image: url(/images/main/Photo-slider.png); */
 }
 
 .slides {
     width: 100%;
     height: 100%;
-    /* max-height: 900px; */
     position: absolute;
     z-index: 0;
     overflow: hidden;
@@ -64,14 +57,15 @@ body {
 }
 
 .slide {
-    width: 1920px;
-    transition:  all .6s ease;
+    width: 100%;
+    transition:  all .7s ease;
 }
 
 .slide img {
     width: 100%;
     min-width: 1920px;
     height: 100%;
+    background-size: cover;
 }
 
 #r1:checked  ~  .s1 {
@@ -486,14 +480,13 @@ input[name="r"] {
 
 .hover-icons {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
     display: flex;
     transform: translate(-50%, -50%);
     z-index: 0;
     background-color: rgba(165, 42, 42, 0.644);
     border-radius: 10px;
-    transition: all .1s ease-in-out;
     visibility: hidden;
 }
 
@@ -501,22 +494,19 @@ input[name="r"] {
     width: 100%;
     height: 100%;
     margin: 10px;
-    transition: all .1s ease-in;
-    
     cursor: pointer;
-    /* display: flex; */
 }
 
 .latest-projects:hover {
 
     .hover-icons {
+        top: 50%;
         visibility: visible;
-        transition: all .3s ease;
+        transition: all 1.51s ease;
     }
 
     .hover-icon {
-    opacity: 1;
-    transition: all .3s ease;
+        opacity: .9;
     }
 
     .text-block-item {
@@ -663,7 +653,7 @@ input[name="r"] {
     background-image: url(/images/projects/bg\ photo.png);
     height: 235px;
     width: 370px;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 .img-item {
@@ -1572,7 +1562,7 @@ ul, li {
 
     .header-nav {
         background: gray;
-        opacity: 40%;
+        opacity: 80%;
         border-radius: 10px;
         width: fit-content;
         padding: 10px;
@@ -1601,7 +1591,7 @@ ul, li {
         right: 5%;
         z-index: 100;
         background: gray;
-        opacity: 30%;
+        opacity: 60%;
         border-radius: 10px;
         height: 40px;
     }
