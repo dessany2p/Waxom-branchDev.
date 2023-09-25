@@ -1,3 +1,33 @@
+import './style.css'
+
+const body = document.body;
+
+
+function generationDots () {
+    let myDots = document.querySelector("body > section.header-main > header > div.navigation-dots");
+    let count = 2;
+    
+    while (count <= document.querySelectorAll('.slide').length) {
+        myDots.insertAdjacentHTML('beforeend', `<label for="r${count}" class="bar"></label>`);
+        count += 1;
+    } 
+}
+
+generationDots()
+
+function generationSlide () {
+    let slides = document.querySelector("body > section.header-main > header > div.slides");
+    let count = 2;
+    while (count <= document.querySelectorAll('.slide').length) {
+        slides.insertAdjacentHTML('beforeend', `<input type="radio" name="r" id="r${count}">`);
+        count += 1;
+    }
+}
+
+generationSlide();
+
+
+
 $(document).ready(function () {
     $('.header-burger__menu').click(function(event) {
         console.log('test')
@@ -13,6 +43,7 @@ $(document).ready(function () {
     });
 });
 
+
 // $(document).ready(function () {
 //     $('.header-burger__menu.active').click(function (e) {
 //         $('.header-burger__menu, .header-nav').addClass.remove('active');
@@ -20,7 +51,7 @@ $(document).ready(function () {
 //     })
 // });
 
-const body = document.body;
+
 const burgerMenu = document.querySelector('.header-burger__menu');
 const burgerNav = document.querySelector('.header-nav');
 
