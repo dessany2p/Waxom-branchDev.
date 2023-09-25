@@ -20,8 +20,22 @@ html, body {
 }
 
 body {
+    position: relative;
     background-repeat: no-repeat;
 }
+
+.lock {
+    overflow: hidden;
+    height: 100vh;  
+    position: relative;
+    /* pointer-events: none; */
+}
+
+.lock-off {
+    overflow: scroll;
+    /* pointer-events: all; */
+}
+
 
 /* Первый блок */
 
@@ -83,7 +97,6 @@ body {
 #r4:checked  ~ .s1 {
     margin-right: -300%;
 }
-
 
 .navigation-dots {
     position: absolute;
@@ -1775,11 +1788,6 @@ ul, li {
 }
 
 @media (max-width: 768px) {
-    body.lock {
-        /* overflow: hidden;
-        max-height: 100vh;  */
-        /* display: none; */
-    }
     .slider__main-photo {
         max-width: 768px;
         padding-top: 5%;

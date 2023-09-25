@@ -1,6 +1,5 @@
 const body = document.body;
 
-
 function generationDots () {
     let myDots = document.querySelector("body > section.header-main > header > div.navigation-dots");
     let count = 2;
