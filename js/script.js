@@ -23,6 +23,31 @@ function generationSlide () {
 
 generationSlide();
 
+const anchors = document.querySelectorAll( 'a[href*="#"]' );
+
+for (let anchor of anchors) {
+    anchor.addEventListener ('click', (event) => {
+        event.preventDefault();
+        const blockID = anchor.getAttribute('href')
+        document.querySelector('' + blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+        })
+    })
+}
+
+// const button = document.querySelectorAll('.menu-li');
+// const form = document.querySelector('.section');
+
+// // При клике на кнопку
+// button.addEventListener('click', (e) => {
+//   // Прокрутим страницу к форме 
+//   form.scrollIntoView({ 
+//     block: 'nearest', // к ближайшей границе экрана
+//     behavior: 'smooth', // и плавно 
+//   });
+// });
+
 
 
 $(document).ready(function () {

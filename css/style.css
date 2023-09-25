@@ -169,6 +169,11 @@ input[name="r"] {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .menu-li {
     color: white;
     cursor: pointer;
@@ -1478,9 +1483,6 @@ ul, li {
         margin: 0 auto;
         max-width: 1230px;
         width: 60%;
-    }
-    .slider-text {
-        
     }
 }
 
