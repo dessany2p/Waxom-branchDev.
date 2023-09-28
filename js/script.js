@@ -1,54 +1,38 @@
 const body = document.body;
 
-function generationDots () {
+function generation () {
     let myDots = document.querySelector("body > section.header-main > header > div.navigation-dots");
+    let slides = document.querySelector("body > section.header-main > header > div.slides .s1");
+
     let count = 2;
+    let countInput = -100
+    const howManySlides = document.querySelectorAll('.slide').length;
     
-    while (count <= document.querySelectorAll('.slide').length) {
+    while (count <= howManySlides) {
         myDots.insertAdjacentHTML('beforeend', `<label for="r${count}" class="bar"></label>`);
+        slides.insertAdjacentHTML('beforebegin', `<input type="radio" name="r" id="r${count}">`);
         count += 1;
+        countInput -= 100;
     } 
 }
 
-generationDots()
-
-function generationSlide () {
-    let slides = document.querySelector("body > section.header-main > header > div.slides");
-    let count = 2;
-    while (count <= document.querySelectorAll('.slide').length) {
-        slides.insertAdjacentHTML('beforeend', `<input type="radio" name="r" id="r${count}">`);
-        count += 1;
-    }
-}
-
-generationSlide();
+generation();
 
 const anchors = document.querySelectorAll( 'a[href*="#"]' );
 
 for (let anchor of anchors) {
+    const blockID = anchor.getAttribute('href')
+    const target = document.querySelector('' + blockID);
+
     anchor.addEventListener ('click', (event) => {
         event.preventDefault();
-        const blockID = anchor.getAttribute('href')
-        document.querySelector('' + blockID).scrollIntoView({
+
+        target.scrollIntoView ({
             behavior: 'smooth',
             block: 'nearest',
         })
     })
 }
-
-// const button = document.querySelectorAll('.menu-li');
-// const form = document.querySelector('.section');
-
-// // При клике на кнопку
-// button.addEventListener('click', (e) => {
-//   // Прокрутим страницу к форме 
-//   form.scrollIntoView({ 
-//     block: 'nearest', // к ближайшей границе экрана
-//     behavior: 'smooth', // и плавно 
-//   });
-// });
-
-
 
 $(document).ready(function () {
     $('.header-burger__menu').click(function(event) {
@@ -65,35 +49,9 @@ $(document).ready(function () {
     });
 });
 
-
-// $(document).ready(function () {
-//     $('.header-burger__menu.active').click(function (e) {
-//         $('.header-burger__menu, .header-nav').addClass.remove('active');
-//         lockOff();
-//     })
-// });
-
-
-const burgerMenu = document.querySelector('.header-burger__menu');
-const burgerNav = document.querySelector('.header-nav');
-
-// const cancelActive = document.getElementsByClassName('.header-burger__menu.active')
-
-// burgerMenu.addEventListener('click', (e) => {
-
-//     lockOn();
-//     // default (lockOff)
-// })
-
-// cancelActive.addEventListener('click', (e) => {
-//     lockOff();
-// })
-
-// const scrollOf = document.querySelector('.lock-on');
-// const scrollOn = document.querySelector('.lock-off');
-
 function lockOn () {
     let PagePosition = window.scrollY;
+    window.scroll(0,0)
     body.classList.add('lock');
     body.dataset.position = PagePosition;
     body.style.top = -PagePosition + 'px';
